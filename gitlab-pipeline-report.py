@@ -133,5 +133,5 @@ def generate_html():
     return NEW_TOP + TABLE_DATA + BOTTOM
 
 
-with open("index.html", "w") as file:
+with open("gitlab-report.html", "w") as file:
     file.write(generate_html())

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "py-html-gen"
+name = "cd-scripts"
 version = "0.1.0"
 description = ""
 authors = ["Logan Donley <logan.donley@gmail.com>"]
