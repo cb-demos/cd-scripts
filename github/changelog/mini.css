@@ -1,0 +1,151 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  background: #eaeff2;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background: #1e252c;
+}
+
+.logos {
+  padding: 16px;
+}
+.logos img {
+  height: 30px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content {
+  background: white;
+  margin-top: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.content h1 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.content h1 a {
+  color: black;
+  font-weight: bold;
+}
+
+.content a:hover {
+  text-decoration: none;
+}
+
+.content p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.cols {
+  margin-bottom: 16px;
+}
+
+.col {
+  margin-right: 1rem;
+}
+.col * {
+  display: block;
+}
+
+.label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.data {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.button {
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 5px;
+}
+
+.primary {
+  background: #007ACC;
+}
+.primary:hover {
+  background: #005a96;
+}
+
+.dark {
+  background: #1E252C;
+}
+.dark:hover {
+  background: black;
+}
+
+/*# sourceMappingURL=mini.css.map */
