@@ -1,0 +1,157 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  background: #eaeff2;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background: #1e252c;
+}
+
+.logos {
+  display: flex;
+  padding: 1rem 0;
+}
+.logos :first-child {
+  padding-right: 1rem;
+  border-right: rgba(255, 255, 255, 0.3) 1px solid;
+}
+.logos img {
+  height: 30px;
+  margin-right: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content {
+  background: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.content h1 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.content a {
+  color: black;
+  font-weight: bold;
+}
+.content a:hover {
+  text-decoration: none;
+}
+.content p {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.cols {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.col {
+  margin-right: 1rem;
+}
+.col * {
+  display: block;
+}
+
+.label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.data {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.file {
+  padding-top: 1rem;
+}
+.file code {
+  margin-top: 0.5rem;
+  display: block;
+  background: #1e252c;
+  color: white;
+  padding: 0.5rem;
+}
+
+.removed-file {
+  background: #f2d9d9;
+  color: #660000;
+  padding: 0.33rem;
+}
+
+.modified-file {
+  background: #f2ecd9;
+  color: #997300;
+  padding: 0.33rem;
+}
+
+.create-file {
+  background: #d9f2d9;
+  color: #006600;
+  padding: 0.33rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

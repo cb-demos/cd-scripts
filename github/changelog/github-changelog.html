@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitHub Changelog</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div class="logos container">
+        <img id="cb-logo" src="https://cdn.cloudbees.com/honeyui/logos/cloudbees-logo-white.svg" alt="CloudBees logo">
+        <img id="gh-logo" src="GitHub_Logo_White.png" alt="GitHub Logo">
+    </div>
+</header>
+<main class="container">
+    <div class="content">
+        <h1><a href="https://github.com/{{ organization }}/{{ repo }}" class="juicy-link">{{ organization }}/{{ repo
+            }}</a> changelog · <a href="https://github.com/{{ organization }}/{{ repo }}/commit/{{ sha }}"
+                                  class="juicy-link">{{ sha }}</a></h1>
+        <p>{{ message }}</p>
+        <div class="cols">
+            <div class="col">
+                <span class="label">Author</span>
+                <span class="data">{{ author }}</span>
+            </div>
+            <div class="col">
+                <span class="label">Date</span>
+                <span class="data">{{ date }}</span>
+            </div>
+        </div>
+        <span class="label">Files touched</span>
+        {% for file in files %}
+        <div class="file">
+            <span class="{% if file.status == 'modified' %}modified-file{% endif %}{% if file.status == 'added' %}create-file{% endif %}{% if file.status == 'removed' %}removed-file{% endif %}">{%
+                if file.status == 'modified' %}~{% endif %}{% if file.status == 'added' %}+{% endif %}{% if file.status
+                == 'removed' %}-{% endif %}{{file.filename}}</span>
+            <pre><code>{{ file.patch }}</code></pre>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
+</html>

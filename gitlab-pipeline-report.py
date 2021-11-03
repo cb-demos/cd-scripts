@@ -119,7 +119,6 @@ BOTTOM = """
 </html>
 """
 
-
 def generate_html():
     NEW_TOP = TOP.replace("REPLACE_TITLE", title)
     TABLE_DATA: str = ""

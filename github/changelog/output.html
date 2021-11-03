@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitHub Changelog</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div class="logos container">
+        <img id="cb-logo" src="https://cdn.cloudbees.com/honeyui/logos/cloudbees-logo-white.svg" alt="CloudBees logo">
+        <img id="gh-logo" src="GitHub_Logo_White.png" alt="GitHub Logo">
+    </div>
+</header>
+<main class="container">
+    <div class="content">
+        <h1><a href="https://github.com/cb-demos/insurance-frontend" class="juicy-link">cb-demos/insurance-frontend</a> changelog · <a href="https://github.com/cb-demos/insurance-frontend/commit/354a65abff4022fb4d5afa433c65dd28d849ad47"
+                                  class="juicy-link">354a65abff4022fb4d5afa433c65dd28d849ad47</a></h1>
+        <p>Updating chart to use the correct var</p>
+        <div class="cols">
+            <div class="col">
+                <span class="label">Author</span>
+                <span class="data">Logan Donley &lt;ldonley@cloudbees.com&gt;</span>
+            </div>
+            <div class="col">
+                <span class="label">Date</span>
+                <span class="data">2021-10-14T14:01:00Z</span>
+            </div>
+        </div>
+        <span class="label">Files touched</span>
+        
+        <div class="file">
+            <span class="modified-file">~chart/templates/deployment.yaml</span>
+            <pre><code>@@ -44,7 +44,7 @@ spec:
+               path: /
+               port: http
+           env:
+-            - name: FM_TOKEN
++            - name: FM_KEY
+               value: {{ .Values.fmToken }}
+             - name: BACKEND_URL
+               value: {{ .Values.backendUrl }}</code></pre>
+        </div>
+        
+        <div class="file">
+            <span class="modified-file">~variableReplace.sh</span>
+            <pre><code>@@ -3,6 +3,7 @@
+ echo &#34;Replacing variables&#34;
+ . /usr/share/nginx/html/.env
+ if [[ -v FM_KEY ]]; then
++  echo &#34;Replacing $VITE_FM_KEY with $FM_KEY&#34;
+   find /usr/share/nginx/html -type f -print0 | xargs -0 sed -i &#34;s/$VITE_FM_KEY/$FM_KEY/g&#34;
+ fi
+ if [[ -v BACKEND_URL ]]; then</code></pre>
+        </div>
+        
+    </div>
+</main>
+</body>
+</html>
