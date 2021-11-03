@@ -163,34 +163,39 @@
         .dark:hover {
             background: black !important;
         }
+        .whitespace-normal {
+            white-space: normal !important;
+        }
     </style>
 </head>
 <body>
-<header>
-    <div class="logos container">
-        <img id="gh-logo" src="https://i.imgur.com/3FEqjkl.png" alt="GitHub Logo">
-    </div>
-</header>
-<main class="container">
-    <div class="content">
-        <h1><a href="https://github.com/{{ organization }}/{{ repo }}" class="juicy-link">{{ organization }}/{{ repo
-            }}</a> changelog <br><a href="https://github.com/{{ organization }}/{{ repo }}/commit/{{ sha }}"
-                                    class="juicy-link">{{ sha }}</a></h1>
-        <p>{{ message }}</p>
-        <div class="cols">
-            <div class="col">
-                <span class="label">Author</span>
-                <span class="data">{{ author }}</span>
-            </div>
-            <div class="col">
-                <span class="label">Date</span>
-                <span class="data">{{ date }}</span>
-            </div>
+<div class="whitespace-normal">
+    <header>
+        <div class="logos container">
+            <img id="gh-logo" src="https://i.imgur.com/3FEqjkl.png" alt="GitHub Logo">
         </div>
-        <a href="{{ report_path }}" class="button primary">Go to detailed changelog</a>
-        <a href="https://github.com/{{ organization }}/{{ repo }}/commit/{{ sha }}" class="button dark">View in
-            GitHub</a>
-    </div>
-</main>
+    </header>
+    <main class="container">
+        <div class="content">
+            <h1><a href="https://github.com/{{ organization }}/{{ repo }}" class="juicy-link">{{ organization }}/{{ repo
+                }}</a> changelog <br><a href="https://github.com/{{ organization }}/{{ repo }}/commit/{{ sha }}"
+                                        class="juicy-link">{{ sha }}</a></h1>
+            <p>{{ message }}</p>
+            <div class="cols">
+                <div class="col">
+                    <span class="label">Author</span>
+                    <span class="data">{{ author }}</span>
+                </div>
+                <div class="col">
+                    <span class="label">Date</span>
+                    <span class="data">{{ date }}</span>
+                </div>
+            </div>
+            <a href="{{ report_path }}" class="button primary">Go to detailed changelog</a>
+            <a href="https://github.com/{{ organization }}/{{ repo }}/commit/{{ sha }}" class="button dark">View in
+                GitHub</a>
+        </div>
+    </main>
+</div>
 </body>
 </html>
