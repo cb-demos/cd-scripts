@@ -37,5 +37,5 @@ rendered = template.render(author=f"{json_resp['commit']['author']['name']} <{js
                            files=files)
 
 
-with open("./github/changelog/output.html", "w") as f:
+with open("./github/changelog/changelogs.html", "w") as f:
     f.write(rendered)
